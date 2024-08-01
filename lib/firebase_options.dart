@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -49,21 +50,20 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDHe4gGEkOFRNq9apTxZaU3jpGGnzJc6o0',
+  static FirebaseOptions android = FirebaseOptions(
+    apiKey: dotenv.env['android_api_key']!,
     appId: '1:143509387576:android:7314d6ac926edde4a4a9cd',
     messagingSenderId: '143509387576',
     projectId: 'souchat-f655b',
     storageBucket: 'souchat-f655b.appspot.com',
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyC5xDPWmBSIHL_aqe1WiuTp5mXE2akjQ98',
+  static FirebaseOptions ios = FirebaseOptions(
+    apiKey: dotenv.env['ios_api_key']!,
     appId: '1:143509387576:ios:1ec3860c9e3e8816a4a9cd',
     messagingSenderId: '143509387576',
     projectId: 'souchat-f655b',
     storageBucket: 'souchat-f655b.appspot.com',
     iosBundleId: 'com.example.souchat',
   );
-
 }
