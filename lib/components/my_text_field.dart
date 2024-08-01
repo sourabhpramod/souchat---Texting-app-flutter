@@ -23,6 +23,7 @@ class MyTextfield extends StatelessWidget {
         obscureText: obsecure,
         controller: controller,
         focusNode: focusNode,
+        style: TextStyle(color: Colors.white),
         decoration: InputDecoration(
           fillColor: const Color.fromARGB(255, 50, 48, 48),
           filled: true,
