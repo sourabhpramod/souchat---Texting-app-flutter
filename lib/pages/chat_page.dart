@@ -71,8 +71,14 @@ class _ChatPageState extends State<ChatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.receiverEmail),
+        iconTheme: IconThemeData(color: Colors.white),
+        backgroundColor: Colors.grey.shade900,
+        title: Text(
+          widget.receiverEmail,
+          style: TextStyle(color: Colors.white),
+        ),
       ),
+      backgroundColor: Colors.grey.shade900,
       body: Column(
         children: [
           Expanded(child: _buildMessageList()),
@@ -139,8 +145,7 @@ class _ChatPageState extends State<ChatPage> {
           )),
           Container(
             decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 123, 53, 116),
-                shape: BoxShape.circle),
+                color: Color.fromARGB(255, 61, 61, 61), shape: BoxShape.circle),
             margin: EdgeInsets.only(right: 10, left: 10),
             child: IconButton(
                 onPressed: sendMessage,

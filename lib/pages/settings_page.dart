@@ -17,12 +17,22 @@ class SettingsPage extends StatelessWidget {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text("Unblock User"),
-        content: const Text("All chill with this user now bro?"),
+        backgroundColor: Colors.grey.shade900,
+        title: const Text(
+          "Unblock User",
+          style: TextStyle(color: Colors.white),
+        ),
+        content: const Text(
+          "All chill with this user now bro?",
+          style: TextStyle(color: Colors.white),
+        ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text("Cancel"),
+            child: const Text(
+              "Cancel",
+              style: TextStyle(color: Colors.white),
+            ),
           ),
           TextButton(
             onPressed: () {
@@ -31,7 +41,10 @@ class SettingsPage extends StatelessWidget {
               ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text("Unblocked successfully!")));
             },
-            child: const Text("Unblock"),
+            child: const Text(
+              "Unblock",
+              style: TextStyle(color: Colors.white),
+            ),
           ),
         ],
       ),
@@ -42,8 +55,14 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     String userId = authService.getCurrentUser()!.uid;
     return Scaffold(
+      backgroundColor: Colors.grey.shade900,
       appBar: AppBar(
-        title: Text("Blocked Users"),
+        iconTheme: IconThemeData(color: Colors.white),
+        backgroundColor: Colors.grey.shade900,
+        title: Text(
+          "Blocked Users",
+          style: TextStyle(color: Colors.white),
+        ),
         centerTitle: true,
       ),
       body: StreamBuilder<List<Map<String, dynamic>>>(

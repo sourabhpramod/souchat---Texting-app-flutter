@@ -24,15 +24,7 @@ class MyTextfield extends StatelessWidget {
         controller: controller,
         focusNode: focusNode,
         decoration: InputDecoration(
-          enabledBorder: OutlineInputBorder(
-            borderSide:
-                BorderSide(color: Theme.of(context).colorScheme.tertiary),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderSide:
-                BorderSide(color: Theme.of(context).colorScheme.primary),
-          ),
-          fillColor: Theme.of(context).colorScheme.secondary,
+          fillColor: const Color.fromARGB(255, 50, 48, 48),
           filled: true,
           hintText: hintText,
         ),

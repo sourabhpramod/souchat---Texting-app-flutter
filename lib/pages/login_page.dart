@@ -20,7 +20,11 @@ class LoginPage extends StatelessWidget {
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title: Text(e.toString()),
+          backgroundColor: Colors.grey.shade900,
+          title: Text(
+            e.toString(),
+            style: TextStyle(color: Colors.white),
+          ),
         ),
       );
     }
@@ -30,14 +34,13 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.surface,
+      backgroundColor: Colors.grey.shade900,
       body: Center(
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.message,
-                  size: 60, color: Theme.of(context).colorScheme.primary),
+              Icon(Icons.anchor, size: 60, color: Colors.white),
               const SizedBox(
                 height: 50,
               ),
@@ -85,7 +88,7 @@ class LoginPage extends StatelessWidget {
                       fontFamily: 'San Francisco',
                       fontWeight: FontWeight.normal,
                       fontSize: 12,
-                      color: Theme.of(context).colorScheme.primary,
+                      color: Colors.grey.shade600,
                     ),
                   ),
                   GestureDetector(
@@ -96,7 +99,7 @@ class LoginPage extends StatelessWidget {
                         fontFamily: 'San Francisco',
                         fontWeight: FontWeight.bold,
                         fontSize: 14,
-                        color: Theme.of(context).colorScheme.primary,
+                        color: Colors.white,
                       ),
                     ),
                   ),

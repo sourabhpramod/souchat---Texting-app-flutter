@@ -17,21 +17,25 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-        backgroundColor: Color.fromARGB(255, 247, 222, 255),
+        backgroundColor: const Color.fromARGB(255, 49, 49, 49),
         child: Column(
           children: [
             DrawerHeader(
               child: Center(
                   child: Icon(
-                Icons.message,
+                Icons.anchor,
+                color: Colors.white,
                 size: 40,
               )),
             ),
             Padding(
               padding: const EdgeInsets.all(25.0),
               child: ListTile(
-                title: Text("Home"),
-                leading: Icon(Icons.home),
+                title: Text("Home", style: TextStyle(color: Colors.white)),
+                leading: Icon(
+                  Icons.home,
+                  color: Colors.white,
+                ),
                 onTap: () {
                   Navigator.pop(context);
                 },
@@ -40,8 +44,11 @@ class MyDrawer extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(25.0),
               child: ListTile(
-                title: Text("Blocked Users"),
-                leading: Icon(Icons.block),
+                title: Text(
+                  "Blocked Users",
+                  style: TextStyle(color: Colors.white),
+                ),
+                leading: Icon(Icons.block, color: Colors.white),
                 onTap: () {
                   Navigator.pop(context);
                   Navigator.push(context,
@@ -52,8 +59,11 @@ class MyDrawer extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(25.0),
               child: ListTile(
-                title: Text("Logout"),
-                leading: Icon(Icons.logout),
+                title: Text("Logout", style: TextStyle(color: Colors.white)),
+                leading: Icon(
+                  Icons.logout,
+                  color: Colors.white,
+                ),
                 onTap: () {
                   logout();
                 },

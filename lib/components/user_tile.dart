@@ -14,14 +14,17 @@ class UserTile extends StatelessWidget {
       onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
-            color: Colors.purple[100], borderRadius: BorderRadius.circular(14)),
+            color: Colors.grey[800], borderRadius: BorderRadius.circular(14)),
         margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 8),
         padding: EdgeInsets.all(20),
         child: Row(
           children: [
             Icon(Icons.person),
             const SizedBox(width: 20),
-            Text(text),
+            Text(
+              text,
+              style: TextStyle(color: Colors.white),
+            ),
           ],
         ),
       ),
