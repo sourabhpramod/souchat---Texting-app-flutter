@@ -1,3 +1,3 @@
 # souchat
 
-A new Flutter project.
+texting app
